@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   Text,
@@ -16,7 +16,6 @@ import LinearGradient from "react-native-linear-gradient";
 
 
 function App(): JSX.Element {
-
   return (
     <SafeAreaView>
       <LinearGradient
