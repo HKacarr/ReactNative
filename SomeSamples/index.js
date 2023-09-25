@@ -11,6 +11,7 @@ import InternetConnection from './src/InternetConnection';
 import ImageGallery from './src/ImageGallery';
 import Slider from './src/Slider';
 import SelectBox from './src/SelectBox';
+import SharedButton from './src/SharedButton';
 
 
-AppRegistry.registerComponent(appName, () => SelectBox);
+AppRegistry.registerComponent(appName, () => SharedButton);

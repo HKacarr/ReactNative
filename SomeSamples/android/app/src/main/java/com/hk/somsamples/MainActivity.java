@@ -1,4 +1,4 @@
-package com.somesamples;
+package com.hk.somsamples;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
