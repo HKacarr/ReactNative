@@ -14,4 +14,4 @@ import SelectBox from './src/SelectBox';
 import SharedButton from './src/SharedButton';
 
 
-AppRegistry.registerComponent(appName, () => SharedButton);
+AppRegistry.registerComponent(appName, () => GradientView);
