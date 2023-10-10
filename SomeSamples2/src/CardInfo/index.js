@@ -15,18 +15,26 @@ const Index = () => {
     const _onChange = (form) => {
         if(form.status.number == "valid"){
             setIsValidCardNumber(true);
+        }else{
+            setIsValidCardNumber(false);
         }
 
         if(form.status.expiry  == "valid"){
             setValidExpiry(true)
+        }else{
+            setValidExpiry(false)
         }
 
         if(form.status.cvc == "valid"){
             setIsValidCvc(true);
+        }else{
+            setIsValidCvc(false)
         }
 
         if(form.status.name == "valid"){
             setIsValidName(true);
+        }else{
+            setIsValidName(false);
         }
 
         console.log(form)
