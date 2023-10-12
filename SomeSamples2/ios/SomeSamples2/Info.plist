@@ -30,6 +30,12 @@
 		<string>VesperLibre-Regular.ttf</string>
 		<string>YoungSerif-Regular.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+    <string>Your message to user when the camera is accessed for the first time</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Your message to user when the photo library is accessed for the first time</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>Give $(PRODUCT_NAME) permission to use your microphone. Your record wont be shared without your permission.</string>
 	<key>CFBundleDisplayName</key>
 	<string>SomeSamples2</string>
 	<key>CFBundleExecutable</key>

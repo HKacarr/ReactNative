@@ -16,6 +16,10 @@ import VideoComponent from './src/Videos/Index';
 import YoutubeVideo from './src/Videos/YoutubeVideo';
 import CustomFontComponent from './src/CustomFont/CustomFontComponent';
 import DrawingCanvasComponent from './src/DrawingCanvas/DrawingCanvasComponent';
+import AudioRecorderComponent from './src/AudioRecorder/AudioRecorderComponent';
+import TagComponent from './src/Tag/TagComponent';
+import QrCodeComponent from './src/QrCode/QrCodeComponent';
+import ContextApiComponent from './src/ContextApi/ContextApiComponent';
 
 
-AppRegistry.registerComponent(appName, () => DrawingCanvasComponent);
+AppRegistry.registerComponent(appName, () => ContextApiComponent);

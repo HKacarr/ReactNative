@@ -75,6 +75,8 @@ PODS:
   - hermes-engine/Pre-built (0.72.5)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
+  - Permission-Camera (3.10.0):
+    - RNPermissions
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -378,6 +380,14 @@ PODS:
   - React-jsinspector (0.72.5)
   - React-logger (0.72.5):
     - glog
+  - react-native-camera (4.2.1):
+    - React-Core
+    - react-native-camera/RCT (= 4.2.1)
+    - react-native-camera/RN (= 4.2.1)
+  - react-native-camera/RCT (4.2.1):
+    - React-Core
+  - react-native-camera/RN (4.2.1):
+    - React-Core
   - react-native-color-picker-light (1.0.1):
     - React
   - react-native-safe-area-context (4.7.2):
@@ -496,8 +506,14 @@ PODS:
     - React-perflogger (= 0.72.5)
   - ReactNativeART (1.2.0):
     - React
+  - RNAudioRecorderPlayer (3.6.1):
+    - React-Core
+  - RNPermissions (3.10.0):
+    - React-Core
   - RNSketchCanvas (0.8.0):
     - React
+  - RNSVG (13.14.0):
+    - React-Core
   - RNVectorIcons (10.0.0):
     - React-Core
   - SocketRocket (0.6.1)
@@ -535,6 +551,7 @@ DEPENDENCIES:
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -553,6 +570,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-camera (from `../node_modules/react-native-camera`)
   - react-native-color-picker-light (from `../node_modules/react-native-color-picker-light`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-video (from `../node_modules/react-native-video`)
@@ -574,7 +592,10 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "ReactNativeART (from `../node_modules/@react-native-community/art`)"
+  - RNAudioRecorderPlayer (from `../node_modules/react-native-audio-recorder-player`)
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - "RNSketchCanvas (from `../node_modules/@terrylinla/react-native-sketch-canvas`)"
+  - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -610,6 +631,8 @@ EXTERNAL SOURCES:
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
     :tag: hermes-2023-08-07-RNv0.72.4-813b2def12bc9df02654b3e3653ae4a68d0572e0
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -642,6 +665,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-camera:
+    :path: "../node_modules/react-native-camera"
   react-native-color-picker-light:
     :path: "../node_modules/react-native-color-picker-light"
   react-native-safe-area-context:
@@ -684,8 +709,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeART:
     :path: "../node_modules/@react-native-community/art"
+  RNAudioRecorderPlayer:
+    :path: "../node_modules/react-native-audio-recorder-player"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   RNSketchCanvas:
     :path: "../node_modules/@terrylinla/react-native-sketch-canvas"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -710,6 +741,7 @@ SPEC CHECKSUMS:
   hermes-engine: f6cf92a471053245614d9d8097736f6337d5b86c
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  Permission-Camera: c0988031cf68f80212d38b69c08bced8c7eb43b7
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: df81ab637d35fac9e6eb94611cfd20f0feb05455
   RCTTypeSafety: 4636e4a36c7c2df332bda6d59b19b41c443d4287
@@ -726,6 +758,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ff70a72027dea5cc7d71cfcc6fad7f599f63987a
   React-jsinspector: aef73cbd43b70675f572214d10fa438c89bf11ba
   React-logger: 2e4aee3e11b3ec4fa6cfd8004610bbb3b8d6cca4
+  react-native-camera: 3eae183c1d111103963f3dd913b65d01aef8110f
   react-native-color-picker-light: 21219a695301821288f069087a224ec41698d80c
   react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
   react-native-video: a6cae6575a8e86cdb5a3d6acf85ea9ea40a15e50
@@ -747,13 +780,16 @@ SPEC CHECKSUMS:
   React-utils: 7a9918a1ffdd39aba67835d42386f592ea3f8e76
   ReactCommon: 91ece8350ebb3dd2be9cef662abd78b6948233c0
   ReactNativeART: 78edc68dd4a1e675338cd0cd113319cf3a65f2ab
+  RNAudioRecorderPlayer: 711f14e1f7634c9765e274245eeca51206c9cf0f
+  RNPermissions: 3acba750d9146af1c33a79c013e02f8b48067acc
   RNSketchCanvas: 9c28adb5381543ed55cc98ce6de46479cb3cb12c
+  RNSVG: d00c8f91c3cbf6d476451313a18f04d220d4f396
   RNVectorIcons: 8b5bb0fa61d54cd2020af4f24a51841ce365c7e9
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   YoutubePlayer-in-WKWebView: 4fca3b4f6f09940077bfbae7bddb771f2b43aacd
 
-PODFILE CHECKSUM: 9edee203c6f6322cb7c29ebcdbc24694f5895c32
+PODFILE CHECKSUM: e763944851b0d6585691c93ce03d7ecd63ff12f1
 
 COCOAPODS: 1.12.1
